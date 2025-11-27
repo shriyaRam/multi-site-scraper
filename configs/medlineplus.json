@@ -1,0 +1,51 @@
+{
+  "site_name": "medlineplus",
+  "allowed_domains": ["medlineplus.gov"],
+  "start_urls": [
+    "https://medlineplus.gov/healthtopics.html"
+  ],
+
+  "crawl": {
+    "min_depth":2,
+    "max_depth":3,
+    "max_pages": 100,
+    "exclude_patterns": [
+      "/URLchecker/",
+      "/usp/",
+      "/cgi/",
+      "/logs/",
+      "/glftp/",
+      "/feeds/",
+      "/groupfeeds/",
+      "/spanish/",
+      "/xml/",
+      "/scwidget/",
+      ".swf",
+      "/login"
+    ],
+    "include_patterns": [""]
+  },
+
+  "selectors": {
+    "title": "h1",
+    "description": "meta[name='description']",
+    "content_containers": [
+      "#topic-summary"
+    ],
+    "content_tags": ["p", "h2", "h3", "li"]
+  },
+
+  "enrichment": {
+    "enable": {
+        "language": true,
+        "readability": true,
+        "lexical": true,
+        "length_bins": true,
+        "keyword_extraction": true,
+        "content_type_inference": true,
+        "redundancy": true
+    },
+    "content_type": "health_topic_page",
+    "topk_keyword_count":10
+}
+}

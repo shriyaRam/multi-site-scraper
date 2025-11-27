@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>Complex Test Page</title>
+    <meta name="description" content="This is a sample description for testing.">
+    <meta charset="UTF-8">
+    <style>
+        .ignore { font-size: 12px; }
+    </style>
+    <script>
+        console.log("ignore this");
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="/home">Home</a>
+        <a href="javascript:void(0)">Invalid JS</a>
+        <a href="mailto:someone@example.com">Email Link</a>
+    </nav>
+
+    <div class="main-content">
+        <h1>Test Heading</h1>
+        
+        <p>First paragraph with &nbsp; entity.</p>
+        <p>Second paragraph with <strong>bold text</strong> and some   irregular    spacing.</p>
+
+        <div class="nested">
+            <p>Nested paragraph inside a container.</p>
+            <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+            </ul>
+        </div>
+
+        <article>
+            <p>Article paragraph inside <article> tag.</p>
+        </article>
+
+        <a href="/relative/link">Relative Link</a>
+        <a href="https://example.com/absolute/link">Absolute Link</a>
+        <a href="tel:+18001234567">Phone Link</a>
+    </div>
+
+    <aside>
+        <p>Sidebar content to ignore for main extraction.</p>
+    </aside>
+
+    <footer>
+        <p>Footer information should be ignored.</p>
+    </footer>
+</body>
+</html>

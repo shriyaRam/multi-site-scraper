@@ -1,0 +1,9 @@
+beautifulsoup4
+requests
+langdetect
+reportlab
+tldextract
+readability-lxml
+lxml
+pytest
+yake
